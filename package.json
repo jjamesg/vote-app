@@ -1,0 +1,25 @@
+{
+  "name": "vote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjamesg/vote-app.git"
+  },
+  "author": "jjames",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjamesg/vote-app/issues"
+  },
+  "homepage": "https://github.com/jjamesg/vote-app#readme"
+}
