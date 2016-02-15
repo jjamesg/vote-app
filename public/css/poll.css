@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.poll-main {
+    padding: 2%;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.question-out {
+    padding: 2%;
+    color: #fff;
+    background-color: #6fb8bd;
+    font-size: 30px;
+}
+
+.answer-out {
+    padding: 2%;
+}
+
+.tot-votes {
+    border-top: 1px solid #ddd;
+    padding: 2%;
+}
+
+.vote {
+    display: block;
+    padding: 2%;
+    margin-top: 3%;
+    width: 100%;
+    background: #00cc66;
+    color: #fff;
+    font-size: 25px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
