@@ -107,7 +107,10 @@ var Main = React.createClass({
         );
         var settingsForm = (
             <div className='settings-form'>
-                Coming soon.
+                Coming soon:<br></br>
+                -customize display<br></br>
+                -limit votes from unique user<br></br>
+                -other stuff
             </div>
         )
         var display = (
