@@ -5,7 +5,7 @@ var Main = React.createClass({
     },
     loadPoll: function() {
         $.get(
-            'https://vote-app-jjamesg.c9users.io/poll/p/' + this.props.path, 
+            this.props.url + this.props.path, 
             function(poll) {
                 this.setState({poll: poll});
             }.bind(this)
@@ -16,7 +16,6 @@ var Main = React.createClass({
         $.get(
             '//freegeoip.net/json/',
             function(location) {
-                console.log(location.ip)
                 this.setState({ip: location.ip});
             }.bind(this)
         );
@@ -31,17 +30,13 @@ var Main = React.createClass({
         var votes = this.state.poll.votes;
         votes[this.state.selected]++;
         
-        console.log(this.state.ip)
         $.post(
-            'https://vote-app-jjamesg.c9users.io/poll/p',
+            this.props.url,
             {pollId: path, votes: votes, ip: this.state.ip},
             function(data) {
                 this.setState({votes: votes});
                 this.setState({view: 'results'});
             }.bind(this));
-           
-        
-        
     },
     render: function() {
         if(this.state.view == 'form') {
@@ -121,4 +116,4 @@ var Results = React.createClass({
 var path = document.URL.split('/').reverse()[0];
 
 
-ReactDOM.render(<Main path={path} />, document.getElementById('content'));
+ReactDOM.render(<Main path={path} url='https://pollerx.herokuapp.com' />, document.getElementById('content'));
