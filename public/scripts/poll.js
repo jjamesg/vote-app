@@ -5,7 +5,7 @@ var Main = React.createClass({
     },
     loadPoll: function() {
         $.get(
-            this.props.url + this.props.path, 
+            this.props.url + '/poll/p/' + this.props.path, 
             function(poll) {
                 this.setState({poll: poll});
             }.bind(this)
@@ -31,7 +31,7 @@ var Main = React.createClass({
         votes[this.state.selected]++;
         
         $.post(
-            this.props.url,
+            this.props.url + '/poll/p',
             {pollId: path, votes: votes, ip: this.state.ip},
             function(data) {
                 this.setState({votes: votes});
